@@ -1,0 +1,11 @@
+import streamlit as st
+import datetime
+
+today = datetime.date.today()
+st.write("Todays date :",today)
+st.title("Age Calculator")
+d = st.date_input("When's your birthday")
+age = today.year - d.year
+if st.button("find"):
+    #st.write("Your age is :", age)
+    st.metric(label="Your age is :", value=age)
